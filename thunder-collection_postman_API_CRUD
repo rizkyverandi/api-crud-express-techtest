@@ -1,0 +1,148 @@
+{
+    "info": {
+        "_postman_id": "19f76b87-540e-4391-bcde-57af4ecf5309",
+        "name": "API_CRUD_ASTRASERA",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "UpdateUser",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:5000/user/update-user",
+                    "path": [
+                        "user",
+                        "update-user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"email\": \"xmanta@example.com\",\n    \"address\": \"Jl. Sei lakam blok G no 3\",\n    \"firstName\": \"Jeremiah\",\n    \"lastName\": \"Tetty\"\n}"
+                }
+            }
+        },
+        {
+            "name": "DeleteUser",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:5000/user/delete-user",
+                    "path": [
+                        "user",
+                        "delete-user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n\"email\": \"xmanta@example.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "CreateUser",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:5000/user",
+                    "query": [
+                        {
+                            "key": "email",
+                            "value": "test@example.com",
+                            "disabled": true
+                        },
+                        {
+                            "key": "password",
+                            "value": "validpassword123",
+                            "disabled": true
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"xmanta@example.com\",\n  \"address\": \"Jl. Sei lakam blok G no 2 \",\n  \"firstName\": \"Jeremy\",\n  \"lastName\": \"Teti\"\n}"
+                }
+            }
+        },
+        {
+            "name": "GetUser",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/user/get-user",
+                    "path": [
+                        "user",
+                        "get-user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"xmanta@example.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "GetAllUser",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:5000/user/get-all-user",
+                    "path": [
+                        "user",
+                        "get-all-user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                }
+            }
+        }
+    ]
+}
